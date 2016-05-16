@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>
+<table border=1>
+	{% for k,v in result.items() %}
+	<tr>
+		{% if k=='Name' %}
+		<th>{{ k }} </th>
+		<td>{{ v }} </td>
+	{% endif %}
+	</tr>
+{% endfor %}
+	{% for k,v in result.items() %}
+	<tr>
+		{% if k!='Name' %}
+		<th>{{ k }} </th>
+		<td>{{ v }} </td>
+	{% endif %}
+	</tr>
+
+{% endfor %}
+	<tr>
+		<th>Total:</th>
+		<th>{{ total }}</th>
+	</tr>
+	<tr>
+		<th>Average:</th>
+		<th>{{ ave }}</th>
+	</tr>
+</table>
+</h1>
+</body>
+</html>
